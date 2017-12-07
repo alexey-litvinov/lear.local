@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/page', function () {
-    return view('page');
-});
+Route::get('/about/{id}','FirstController@show');
+Route::get('/test/{test}','Admin\Core@zalupa');
+
+Route::get('/article/{id}',['uses'=>'Admin\Core@getArticle', 'as'=>'id']);
+Route::get('/articles', 'Admin\Core@getArticles')->name('articles');
+
+Route::resource('/pages', 'PagesController');
+Route::resource('/pages/{page}', 'PagesController');
+
+//Route::resource('/custom-controller', 'PagesController@getIndex');
