@@ -21,7 +21,7 @@ Route::get('/test/{test}','Admin\Core@zalupa');
 Route::get('/article/{id}',['uses'=>'Admin\Core@getArticle', 'as'=>'id']);
 Route::get('/articles', 'Admin\Core@getArticles')->name('articles');
 
-Route::resource('pages', 'PagesController');
+Route::resource('pages', 'PagesController')->name('page')->middleware('Mymiddleware');
 //Route::resource('page/{page}', 'PagesController');
 
 //Route::resource('/custom-controller', 'PagesController@getIndex');

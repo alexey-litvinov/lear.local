@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {
-    public function getIndex(){
+    public function index(){
 
         return "Мой кастомный метод контроллера";
     }
