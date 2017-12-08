@@ -15,8 +15,8 @@ class Mymiddleware
      */
     public function handle($request, Closure $next)
     {
-      if ($request->route('page') != 'govno') {
-        return redirect()->route('/');
+      if (!$request->route('pages') == 'pages') {
+        return redirect()->route('home');
       }
 
         return $next($request);

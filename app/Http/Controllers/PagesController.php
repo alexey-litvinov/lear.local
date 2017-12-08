@@ -9,7 +9,7 @@ class PagesController extends Controller
 {
     public function index(){
 
-        return "Мой кастомный метод контроллера";
+        return "<h1>Мой кастомный метод контроллера</h1>";
     }
     // return "<h1>Хуйня</h1>";
 }
