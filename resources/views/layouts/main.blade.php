@@ -1,14 +1,14 @@
 @section('head')
   <!doctype html>
-  <html lang="en">
+  <html lang="ru">
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="description" content="">
       <meta name="author" content="">
-      <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+      <link rel="icon" href="/img/logo-mini.png">
 
-      <title>Laravel Web</title>
+      <title>{{$title}} | Финансовая компания Рост</title>
 
       <!-- Bootstrap core CSS -->
       <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -32,27 +32,27 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto col-5">
-            <li class="nav-item active">
-              <a class="nav-link text-dark ion-ios-home-outline" href="/"> Главная<span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link text-dark ion-ios-home-outline" href="{{route('index')}}"> Главная<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark ion-ios-people" href="#"> Частным лицам</a>
+              <a class="nav-link text-dark ion-ios-people" href="{{route('index') }}"> Частным лицам</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark ion-ios-people" href="#"> Юридическим лицам</a>
+              <a class="nav-link text-dark ion-ios-people" href="{{route('index')}}"> Юридическим лицам</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark ion-location" href="#"> Отделения</a>
+              <a class="nav-link text-dark ion-location" href="{{route('index')}}"> Отделения</a>
             </li>
           </ul>
 
           <ul class="navbar-nav mr-auto row align-items-end">
 
             <li class="nav-item">
-              <a class="nav-link text-dark ion-briefcase" href="#"> Вакансии</a>
+              <a class="nav-link text-dark ion-briefcase" href="{{route('vacancies')}}"> Вакансии</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark ion-ios-home" href="/contacts"> Контакты</a>
+              <a class="nav-link text-dark ion-ios-home" href="{{route('contacts')}}"> Контакты</a>
             </li>
           </ul>
         </div>
@@ -71,7 +71,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="/img/2.jpg" alt="First slide">
+            <img class="first-slide" src="/img/2.jpeg" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
                 <h1>Example headline.</h1>
@@ -81,7 +81,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+            <img class="second-slide" src="/img/1.jpeg" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Another example headline.</h1>
@@ -91,7 +91,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <img class="third-slide" src="/img/3.jpeg" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
                 <h1>One more for good measure.</h1>
@@ -122,7 +122,7 @@
         <!-- FOOTER -->
         <footer class="container">
           <p class="float-right"><a href="#">Back to top</a></p>
-          <p>&copy; 2017 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+          <p>&copy; 2017 Финансовая компания Рост &middot; <a href="{{route('vacancies')}}">Вакансии</a> &middot; <a href="{{route('contacts')}}">Контакты</a></p>
         </footer>
       @endsection
       @yield('footer')

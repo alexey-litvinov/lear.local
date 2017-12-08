@@ -11,17 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', 'IndexController@show')->name('index');
 
-Route::get('/contacts', function () {
-  $map = GMaps::create_map();
+Route::get('/contacts', 'ContactsController@show')->name('contacts');
 
-    echo $map['js'];
-    echo $map['html'];
-    return view('contacts');
-})->name('contacts');
+Route::get('/vacancies', 'VacanciesController@show')->name('vacancies');
 
 Route::get('/about/{id}','FirstController@show');
 Route::get('/test/{test}','Admin\Core@zalupa');
