@@ -16,6 +16,10 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/contacts', function () {
+  $map = GMaps::create_map();
+
+    echo $map['js'];
+    echo $map['html'];
     return view('contacts');
 })->name('contacts');
 
