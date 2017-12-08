@@ -17,6 +17,7 @@
       <link href="https://getbootstrap.com/docs/4.0/examples/carousel/carousel.css" rel="stylesheet">
       <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
 
+
     </head>
 @show
 
@@ -121,7 +122,7 @@
       @section('footer')
         <!-- FOOTER -->
         <footer class="container">
-          <p class="float-right"><a href="#">Back to top</a></p>
+          <p class="float-right"><a class="to-top" href="#">В начало страницы</a></p>
           <p>&copy; 2017 Финансовая компания Рост &middot; <a href="{{route('vacancies')}}">Вакансии</a> &middot; <a href="{{route('contacts')}}">Контакты</a></p>
         </footer>
       @endsection
@@ -137,6 +138,7 @@
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
     <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="https://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
   </body>
