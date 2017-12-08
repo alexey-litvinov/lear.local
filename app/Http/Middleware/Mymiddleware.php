@@ -16,7 +16,9 @@ class Mymiddleware
     public function handle($request, Closure $next)
     {
       if (!$request->route('pages') == 'pages') {
-        return redirect()->route('home');
+        redirect()->route('index');
+        return;
+
       }
 
         return $next($request);

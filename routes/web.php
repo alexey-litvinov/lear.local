@@ -12,8 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 })->name('home');
+
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
 
 Route::get('/about/{id}','FirstController@show');
 Route::get('/test/{test}','Admin\Core@zalupa');
@@ -21,7 +25,7 @@ Route::get('/test/{test}','Admin\Core@zalupa');
 Route::get('/article/{id}',['uses'=>'Admin\Core@getArticle', 'as'=>'id']);
 Route::get('/articles', 'Admin\Core@getArticles')->name('articles');
 
-Route::resource('pages', 'PagesController')->middleware('mymiddle');
+Route::resource('pages', 'PagesController');//->middleware('mymiddle');
 Route::resource('page/{page}', 'PagesController');
 
 //Route::resource('/custom-controller', 'PagesController@getIndex');
