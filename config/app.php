@@ -169,6 +169,7 @@ return [
          * Package Service Providers...
          */
          // FarhanWazir\GoogleMaps\GMapsServiceProvider::class,
+         // Core\BootstrapForm\BootstrapFormServiceProvider::class
         /*
          * Application Service Providers...
          */
@@ -227,6 +228,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         // 'GMaps' => FarhanWazir\GoogleMaps\Facades\GMapsFacade::class,
+        // 'Form' => Collective\Html\FormFacade::class
 
     ],
 

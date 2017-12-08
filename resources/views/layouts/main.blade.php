@@ -21,9 +21,30 @@
     </head>
 @show
 
-
+{{-- Всплывашка с заявкой на кредит --}}
   <body>
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Заявка на кредит</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            {{ Form::open() }}
+                {{ Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Ваше имя']) }}
+            {!! Form::close() !!}
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Отправить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+{{-- Всплывашка с заявкой на кредит --}}
     @section('header')
     <header class="row">
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info col-12">
@@ -32,7 +53,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto col-5">
+          <ul class="navbar-nav mr-auto col-7">
             <li class="nav-item">
               <a class="nav-link text-dark ion-ios-home-outline" href="{{route('index')}}"> Главная<span class="sr-only">(current)</span></a>
             </li>
@@ -44,6 +65,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark ion-location" href="{{route('index')}}"> Отделения</a>
+            </li>
+            <li class="nav-item">
+              <button class="text-center btn btn-danger" data-toggle="modal" data-target="#exampleModal">Оставить заявку на кредит</button>
             </li>
           </ul>
 
